@@ -56,6 +56,10 @@ body {
   padding: 0;
 }
 
+.board-status {
+  margin-bottom: 10px;
+}
+
 .board-row {
   display: flex;
 }
