@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function Square({ value, onSquareClick }) {
+function Square({ value, onSquareClick }: { value: string; onSquareClick: () => void; }) {
   return (
     <button className="square" onClick={onSquareClick}>
       {value}
@@ -8,7 +8,7 @@ function Square({ value, onSquareClick }) {
   );
 }
 
-function calculateWinner(squares) {
+function calculateWinner(squares: string[]) {
   const lines = [
     [0, 1, 2],
     [3, 4, 5],
@@ -43,7 +43,7 @@ export default function Board() {
     status = "Next player: " + (xIsNext ? "X" : "O");
   }
 
-  function handleClick(i) {
+  function handleClick(i: number) {
     if (squares[i] || winner) {
       return;
     }
